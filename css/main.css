@@ -1,0 +1,630 @@
+/* ---------------------------- normalize -- reset css ve chuan ---------------------------- */
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+sub, sup {
+  /* Specified in % so that the sup/sup is the
+     right size relative to the surrounding text */
+  font-size: 75%;
+
+  /* Zero out the line-height so that it doesn't
+     interfere with the positioning that follows */
+  line-height: 0;
+
+  /* Where the magic happens: makes all browsers position
+     the sup/sup properly, relative to the surrounding text */
+  position: relative;
+
+  /* Note that if you're using Eric Meyer's reset.css, this
+     is already set and you can remove this rule */
+  vertical-align: baseline;
+}
+
+sup {
+  /* Move the superscripted text up */
+  top: -0.5em;
+}
+
+sub {
+  /* Move the subscripted text down, but only
+     half as far down as the superscript moved up */
+  bottom: -0.25em;
+}
+
+
+
+/* ---------------------------- base ---------------------------- */
+body {
+	background: url(../image/bg.png);
+	background-size: cover;
+}
+
+textarea {
+    resize: none;
+}
+
+.box-heading {
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 32px;
+	background:url(../image/bg_search.png);
+}
+
+
+
+/* ---------------------------- layout ---------------------------- */
+.clear {
+    overflow: hidden;
+    clear: both;
+}
+
+.row {
+	padding: 0;
+}
+
+.container {
+	width: 1000px;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.col-narrow--left {
+	float: left;
+	width: 20%;
+}
+
+.col-narrow--right {
+	float: right;
+	width: 20%;
+}
+
+.col-wide {
+	float: left;
+	width: 59%;
+}
+
+
+
+/* ---------------------------- modules ---------------------------- */
+
+/* ----------------------------
+header
+---------------------------- */
+.header-text {
+	text-align: center;
+	font-size: 90px;
+}
+
+.header__nav {
+	background-color: #A79E9E;
+	margin-bottom: 10px;
+}
+
+.header__nav li {
+	display: inline-block;
+	width: 138px;
+	text-align: center;
+	border-right: 1px solid #b0b0b0;
+	line-height: 30px;
+}
+
+.header__nav li:last-child {
+	border-right: none;
+}
+
+.header__nav a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #000;
+	font-size: 13px;
+}
+
+.header__nav a:hover {
+	font-weight: normal;
+	background: #000;
+	color:#FFF;
+	border-radius: 6px;
+	padding: 5px 8px;
+}
+
+.header__nav .home {
+	background-image: url(../image/icon-home.png);
+	background-repeat: no-repeat;
+	background-position: 20px;
+}
+
+.header__nav .home a {
+	margin-left: 15px;
+}
+
+
+
+/* ----------------------------
+helper
+---------------------------- */
+.helper {
+	position: absolute;
+	left: 1010px;
+	top: 85px;
+}
+
+/* ----------------------------
+left-sidebar
+---------------------------- */
+.sidebar--left {
+	background: url(../image/bg_sidebar.png);
+	border-right: 1px solid #f1f1f1;
+	border-bottom: 1px solid #f1f1f1;
+}
+
+/*--- search ---*/
+.sidebar--left__search {
+	padding-bottom: 15px;
+}
+
+.sidebar--left__search form {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.sidebar--left__search input[type="text"], .sidebar--left__search input[type=image] {
+	display: inline-block;
+	vertical-align:bottom;
+}
+
+.sidebar--left__search input[type=text] {
+	width: 168px;
+	background-color: #c1c1c1;
+	margin-top: 15px;
+}
+
+.sidebar--left__search input[type=image] {
+	width: 11.5%;
+	height: 11.5%;
+	margin-left: -6px;
+	margin-bottom: 1px
+}
+
+.sidebar--left__search textarea {
+	width: 100%;
+	margin-top: 5px;
+	height: 80px;
+    max-height: 80px;
+}
+
+.sidebar--left__search ::-webkit-input-placeholder {
+   color: #f1f1f1;
+   padding-left: 10px;
+}
+
+.sidebar--left__search input[type="submit"], .sidebar--left__search a {
+	display: inline-block;
+	vertical-align: center;
+	margin-top: 5px;
+}
+
+.sidebar--left__search input[type="submit"] {
+	background-color: #919191;
+	color: #f1f1f1;
+	border-radius: 5px;
+	margin-left: 17px;
+}
+
+.sidebar--left__search a {
+	font-size: 14px;
+	font-style: italic;
+	color: #31CCDE;
+}
+
+/*--- trusted ---*/
+.sidebar--left__trusted ul {
+	list-style-image: url('../image/icon_shop.png');
+	padding: 15px 0;
+}
+
+.sidebar--left__trusted li {
+	margin-left: 40px;
+}
+
+/*--- untrusted ---*/
+.sidebar--left__untrusted ul {
+	list-style-image: url('../image/icon_shop_bad.png');
+	padding: 15px 0;
+}
+
+.sidebar--left__untrusted li {
+	margin-left: 40px;
+}
+
+/*--- special ---*/
+.sidebar--left__special {
+	padding-bottom: 15px;
+}
+
+.sidebar--left__special img {
+	display: block;
+	margin: 0 auto;
+	padding-top: 15px;
+}
+
+.sidebar--left__special p {
+	font-size: 13px;
+	margin-top: 15px;
+	width: 97%;
+	padding-left: 15px;
+}
+
+.sidebar--left__special a {
+	color: #F01246;
+	font-size: 14px;
+	font-style: italic;
+}
+
+/*--- feedback ---*/
+.sidebar--left__feedback {
+	padding-bottom: 15px;
+}
+
+.sidebar--left__feedback form {
+	width: 95%;
+	margin: 0 auto;
+}
+.sidebar--left__feedback textarea {
+	width: 100%;
+	margin-top: 5px;
+	height: 80px;
+    max-height: 80px;
+}
+
+.sidebar--left__feedback input[type="submit"] {
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+	background-color: #919191;
+	color: #f1f1f1;
+	border-radius: 5px;
+}
+
+.sidebar--left__feedback ::-webkit-input-placeholder {
+   color: #101010;
+   padding-left: 5px;
+}
+
+
+
+/* ----------------------------
+right-sidebar
+---------------------------- */
+.sidebar--right {
+	background: url(../image/bg_sidebar.png);
+}
+
+/*--- register ---*/
+.sidebar--right__register {
+	text-align: center;
+	padding-bottom: 15px;
+	border: 1px solid #f1f1f1;
+	margin-bottom: 3px;
+}
+
+.sidebar--right__register form {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.sidebar--right__register input[type="text"], .sidebar--right__register input[type="password"] {
+	margin-top: 10px;
+	display: block;
+	width: 100%;
+}
+
+.sidebar--right__register ::-webkit-input-placeholder {
+   padding-left: 5px;
+}
+
+.sidebar--right__register input[type="submit"] {
+	margin-top: 15px;
+	margin-bottom: 20px;
+	background-color: #919191;
+	color: #212121;
+	border-radius: 5px;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.sidebar--right__register a {
+	color: #31CCDE;
+	font-style: italic;
+	font-weight: 600;
+	display: block;
+	margin: 0 auto;
+	font-size: 13px;
+}
+
+/*--- payment ---*/
+.sidebar--right__payments {
+	padding-bottom: 15px;
+	border: 1px solid #f1f1f1;
+	margin-bottom: 3px;
+}
+.sidebar--right__payments li {
+	display: inline;
+}
+
+.sidebar--right__payments .box-heading {
+	margin-bottom: 10px;
+}
+
+/*--- ad ---*/
+.sidebar--right__ads img {
+	height: 100%;
+	width: 100%;
+	border: 1px solid #f1f1f1;
+}
+
+/*--- statistic ---*/
+.sidebar--right__statistic {
+	margin-top: 4px;
+	border: 1px solid #f1f1f1;
+	background: #f9f9f9;
+}
+
+.sidebar--right__statistic img, .sidebar--right__statistic p {
+	display: inline;
+	vertical-align: bottom;
+}
+
+.sidebar--right__statistic .online {
+	margin-bottom: -5px;
+}
+
+.sidebar--right__statistic .online img {
+	margin-left: 5px;
+	margin-right: 10px;
+}
+
+.sidebar--right__statistic .visited img {
+	margin-left: 3px;
+	margin-right: 7px;
+}
+
+/* ----------------------------
+content
+---------------------------- */
+.content {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.content h3 {
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 12px;
+}
+
+.content hr {
+	border: 1.5px solid #000;
+	color: #000;
+	width: 86%;
+	float: right;
+	margin-top: -3px;
+}
+
+/*--- banner ---*/
+.content__banner img {
+	height: 100%;
+	width: 100%;
+}
+
+/*--- features ---*/
+.content__features {
+	border: 1px solid #f1f1f1;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.content__features ul {
+	width: 100%;
+	padding: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.content__features li {
+	display: inline;
+	text-align: center;
+}
+
+.content__features .left {
+	float: left;
+	position: absolute;
+	left: 0px;
+	top: 70px;
+}
+
+.content__features .right {
+	float: right;
+	position: absolute;
+	right: 0px;
+	top: 70px;
+}
+
+.content__features img {
+	margin-right: 10px;
+	border: 1px solid #f1f1f1;
+	padding: 5px;
+	height: 80%;
+}
+
+.content__features .left img, .content__features .right img {
+	border: none;
+}
+/*--- shopping ---*/
+.content__shopping .product {
+	margin-left: 5px;
+	float: left;
+	width: 190px;
+}
+
+.content__shopping hr {
+	width: 80%;
+}
+
+.content__shopping .product img {
+	width: 75%;
+	border: 1px solid #f1f1f1;
+	display: block;
+	margin: 0 auto;
+}
+
+.content__shopping .product p {
+	margin: 0 auto;
+	width: 142px;
+	font-size: 13px;
+	margin-bottom: 5px;
+}
+
+.content__shopping .product a {
+	text-decoration: none;
+	color: #000;
+}
+
+/* ----------------------------
+company
+---------------------------- */
+.company {
+	border: 1px solid #f1f1f1;
+	width: 98%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.company ul {
+	padding: 10px;
+	margin-left: 15px;
+}
+
+.company li {
+	display: inline;
+	padding: 5px;
+	text-align: center;
+}
+
+.company .left {
+	float: left;
+	position: absolute;
+	left: 0px;
+	top: 25px;
+}
+
+.company .right {
+	float: right;
+	position: absolute;
+	right: 0px;
+	top: 25px;
+}
+
+/* ----------------------------
+footer
+---------------------------- */
+.footer {
+	background: #F2EEEE;
+	margin-top: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.footer__nav li {
+	display: inline;
+}
+
+.footer__nav a {
+	text-decoration: none;
+	color: #000;
+}
+
+.footer__nav a:hover {
+	text-decoration: underline;
+}
+
+.footer__nav li:after {
+	content: "|";
+	padding: 0 15px;
+}
+
+.footer__nav li:last-child:after {
+	content: "";
+}
+
+.footer__web {
+	font-weight: bold;
+	font-size: 25px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.footer__contact {
+	margin-bottom: 5px;
+}
+
+.footer__contact a {
+	text-decoration: none;
+	color: #000;
+}
+
+/* Form */
+.contact {
+	margin-left: 10px;
+}
+
+.contact h1 {
+	font-size: 30px;
+	color: #4E4040;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.contact__form {
+	margin-left: 8px;
+	border: 1px solid #f1f1f1;
+	padding-top: 10px;
+	width: 95%;
+}
+
+.form-group {
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+
+.form-control {
+	width: 95%;
+	height: 34px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+textarea.form-control {
+  height: 200px;
+}
+
+input[type="submit"].form-control {
+	border-radius: 4px;
+	width: 20%;
+	background-color: #E4EBEB;
+}
